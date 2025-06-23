@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HeaderIfLoggedIn from './HeaderIfLoggedIn';
 import { FaHeart, FaRegHeart, FaComments } from 'react-icons/fa';
-import Comments from "./Comments";  // Kommentarkomponente importieren
+import Comments from "./Comments";
 
 function Blogs({ username }) {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [commentsVisible, setCommentsVisible] = useState({}); // Objekt, um Sichtbarkeit je Blog zu speichern
+  const [commentsVisible, setCommentsVisible] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -78,7 +78,6 @@ function Blogs({ username }) {
     }
   };
 
-  // Kommentar-Button toggle Funktion
   const toggleComments = (blogId) => {
     setCommentsVisible((prev) => ({
       ...prev,
@@ -92,8 +91,7 @@ function Blogs({ username }) {
   return (
     <div>
       <HeaderIfLoggedIn />
-      <h2>Willkommen zurück, {username}</h2>
-      <h2>Entdecke...</h2>
+      <h1>Willkommen zurück, {username}!</h1>
       {blogs.length === 0 && <p>Keine Blogs vorhanden.</p>}
       <ul className="blogs-list">
         {blogs.map((blog) => {
@@ -105,7 +103,7 @@ function Blogs({ username }) {
             <li key={blog.id} className="blog-post">
               <h3>{blog.title}</h3>
               <p>{blog.content}</p>
-              <small>Autor: {blog.autor?.username || "Unbekannt"}</small>
+              <small>Verfasser: {blog.autor?.username || "Unbekannt"}</small>
               <div className="btn-group">
                 <button className="btn btn-like" onClick={() => handleLikeToggle(blog)}>
                   {hasLiked ? <FaHeart className="icon-like liked" /> : <FaRegHeart className="icon-like" />}

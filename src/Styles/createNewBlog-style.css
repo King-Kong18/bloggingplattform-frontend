@@ -52,17 +52,12 @@
 
 .create-blog-form button {
   display: block;
-  /* block, damit margin auto funktioniert */
   width: 20rem;
   height: 2.5rem;
-  /* etwas höher für bessere Klickbarkeit */
   margin: 2rem auto;
-  /* oben/unten 2rem, links/rechts auto (zentriert) */
   border: none;
   border-radius: 8px;
-  /* abgerundeter */
   background: linear-gradient(90deg, #2575fc, #6a11cb);
-  /* schöner Farbverlauf */
   color: white;
   font-weight: 600;
   font-size: 1rem;
@@ -71,10 +66,9 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   line-height: 2.5rem;
-  /* vertikale Zentrierung des Texts */
 }
 
 .create-blog-form button:hover {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
   box-shadow: 0 6px 15px rgba(106, 17, 203, 0.7);
 }

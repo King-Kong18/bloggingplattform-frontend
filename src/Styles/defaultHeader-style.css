@@ -1,18 +1,14 @@
-/* === HEADER CONTAINER === */
 .header-container {
   display: flex;
   justify-content: space-between;
-  /* linke und rechte Seite */
   align-items: center;
   padding: 1rem 2rem;
   margin-top: 2rem;
   background: linear-gradient(90deg, #2575fc, #6a11cb);
   color: white;
   flex-wrap: wrap;
-  /* für kleinere Bildschirme */
 }
 
-/* === LINKER BEREICH MIT LOGO UND TITEL === */
 .header-left {
   display: flex;
   align-items: center;
@@ -26,14 +22,8 @@
   user-select: none;
   cursor: pointer;
   margin-right: 3rem;
-  transition: transform 0.2s ease;
 }
 
-.logo img:hover {
-  transform: scale(1.05);
-}
-
-/* === SEITENTITEL === */
 .header-container h1 {
   font-size: 2.5rem;
   color: white;
@@ -41,10 +31,9 @@
   margin: 0;
 }
 
-/* === TAGLINE (RECHTE SEITE) === */
 .tagline {
   font-size: 1.2rem;
-  color: #e0d7ff;
+  color: #ffffff;
   font-style: italic;
   margin-left: 25rem;
   margin-right: 0;
@@ -52,7 +41,6 @@
   flex-shrink: 0;
 }
 
-/* === RESPONSIVE VERHALTEN === */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;

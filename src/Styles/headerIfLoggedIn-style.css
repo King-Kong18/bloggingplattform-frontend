@@ -59,31 +59,22 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    /* Abstand zwischen Icon und Text */
     margin-right: 24px;
-    /* Abstand zwischen NavLinks */
     font-size: 18px;
-    /* Textgröße */
     color: #333;
-    /* Beispielfarbe */
     text-decoration: none;
 }
 
 .nav-link-icon svg {
-    width: 20px;
-    /* Icon Breite */
-    height: 20px;
-    /* Icon Höhe */
+    width: 25px;
+    height: 25px;
     fill: currentColor;
-    /* Icon-Farbe passend zum Text */
 }
 
 .nav-link-icon:last-child {
     margin-right: 0;
-    /* Kein Abstand beim letzten Link */
 }
 
-/* Optional: aktiver Link Style */
 .nav-link-icon.active {
     font-weight: bold;
     color: #007BFF;

@@ -1,4 +1,3 @@
-// Comments.jsx
 import React, { useState, useEffect } from "react";
 import "../Styles/comments-style.css";
 
@@ -7,7 +6,6 @@ function Comments({ blogId, username }) {
     const [newCommentText, setNewCommentText] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // Beim Laden: Kommentare abrufen
     const fetchComments = async () => {
         try {
             const response = await fetch(`http://localhost:8080/comments/${blogId}`);
@@ -18,7 +16,7 @@ function Comments({ blogId, username }) {
             console.error(error.message);
         }
     };
-    
+
     useEffect(() => {
 
         fetchComments();

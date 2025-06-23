@@ -8,11 +8,11 @@ function LogIn({ onLogin }) {
   const [isRegistering, setIsRegistering] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // Neuer State für Fehler
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage(""); // Fehler zurücksetzen
+    setErrorMessage("");
 
     const url = isRegistering
       ? "http://localhost:8080/users"
@@ -80,12 +80,11 @@ function LogIn({ onLogin }) {
             {isRegistering ? "Jetzt registrieren" : "Jetzt einloggen"}
           </button>
 
-          {/* Fehlermeldung anzeigen */}
           {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <p className="toggle-link" onClick={() => {
             setIsRegistering(!isRegistering);
-            setErrorMessage(""); // Fehler beim Umschalten zurücksetzen
+            setErrorMessage("");
           }}>
             {isRegistering
               ? "Schon ein Konto? Jetzt anmelden"

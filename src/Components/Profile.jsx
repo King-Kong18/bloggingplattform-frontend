@@ -69,7 +69,7 @@ function Profile({ username, benutzerId, password, onLogout }) {
         <>
             <Header />
             <div className="profile-container">
-                <h2>Mein Profil bearbeiten</h2>
+                <h2>Profil bearbeiten</h2>
                 <form onSubmit={handleUpdate} className="profile-form">
                     <label>Benutzername</label>
                     <input
