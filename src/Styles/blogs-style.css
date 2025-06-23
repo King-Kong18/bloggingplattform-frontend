@@ -1,0 +1,175 @@
+/* Allgemeines Layout */
+body {
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2e2e2e;
+}
+
+/* Überschriften */
+h2 {
+  margin: 2rem 2rem 1rem;
+  font-weight: 700;
+  color: #1c1e21;
+  font-size: 1.8rem;
+}
+
+/* Liste der Blogs */
+.blogs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 720px;
+  margin-inline: auto;
+  padding-bottom: 3rem;
+}
+
+/* Einzelner Blog-Post */
+.blog-post {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Titel */
+.blog-post h3 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* Inhalt */
+.blog-post p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  white-space: pre-line;
+  color: #444;
+}
+
+/* Autor */
+.blog-post small {
+  color: #888;
+  font-style: italic;
+  margin-top: auto;
+}
+
+/* Button-Gruppe */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Allgemeine Buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+/* Like-Button */
+.btn-like {
+  background: none;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.icon-like {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.icon-like.liked {
+  color: #e0245e;
+}
+
+.like-count {
+  font-weight: 600;
+  color: #333;
+  min-width: 24px;
+}
+
+/* Kommentarbutton */
+.btn-comments {
+  background-color: #000000;
+  color: #000000;
+}
+
+.btn-comments:hover {
+  background-color: #d0e3ff;
+}
+
+.icon-comments {
+  margin-right: 0.4rem;
+  font-size: 1.2rem;
+}
+
+/* Bearbeiten */
+.btn-edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #218838;
+}
+
+/* Löschen */
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #bd2130;
+}
+
+/* Kommentare-Bereich */
+.comments-container {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Verhalten */
+@media (max-width: 600px) {
+  .blog-post {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h2 {
+    margin: 1.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .blogs-list {
+    padding: 0 1rem 3rem;
+  }
+}

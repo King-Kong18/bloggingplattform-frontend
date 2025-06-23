@@ -1,0 +1,73 @@
+.edit-blog-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-blog-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.edit-blog-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-blog-form label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.edit-blog-form input[type="text"],
+.edit-blog-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.edit-blog-form textarea {
+    min-height: 150px;
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.btn-save {
+    background-color: #28a745;
+}
+
+.btn-save:hover {
+    background-color: #1e7e34;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+}
+
+.btn-cancel:hover {
+    background-color: #565e64;
+}
